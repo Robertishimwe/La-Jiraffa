@@ -1,0 +1,25 @@
+15: <link rel="alternate" type="application/rss+xml" title="Constructo &raquo; Feed"
+17: <link rel="alternate" type="application/rss+xml" title="Constructo &raquo; Comments Feed"
+19: <link rel="alternate" type="application/rss+xml" title="Constructo &raquo; Home Comments Feed"
+45: <style id='wp-block-library-theme-inline-css' type='text/css'>
+52: .is-dark-theme .wp-block-audio :where(figcaption) {
+73: .is-dark-theme .wp-block-embed :where(figcaption) {
+87: .is-dark-theme .blocks-gallery-caption {
+97: .is-dark-theme :root :where(.wp-block-image figcaption) {
+209: .is-dark-theme .wp-block-table :where(figcaption) {
+219: .is-dark-theme .wp-block-video :where(figcaption) {
+233: <style id='classic-theme-styles-inline-css' type='text/css'>
+599: <link rel='stylesheet' id='theme_main_style-css'
+611: <link rel='stylesheet' id='theme_wordpress_style-css'
+614: <style id='theme_wordpress_style-inline-css' type='text/css'>
+1505: <meta name="generator" content="WordPress 6.6.3" />
+1519: <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress." />
+1521: content="Powered by Slider Revolution 6.7.15 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+1824: /* Theme accent color */
+2176: style="z-index:5;font-family:'PT Sans';text-shadow:none;">CONSTRUCTO
+2177: WORDPRESS THEME
+2246: style="z-index:5;font-family:'PT Sans';text-shadow:none;">CONSTRUCTO
+2247: WORDPRESS THEME
+2351: <p>Constructo Construction Inc provides building services to clients who
+2387: <p>In Constructo we are committed to green building, roads, bridges and
+3254: <input type="hidden" id="theme-path"
