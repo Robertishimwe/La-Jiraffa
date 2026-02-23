@@ -117,26 +117,12 @@ document.addEventListener("DOMContentLoaded", function () {
 											<a href="index.html#projects">Projects</a>
 										</li>
 										<li
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0">
+											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0">
 											<a href="index.html#services">What we do</a>
-											<ul class="sub-menu">
-												<li class="menu-item menu-item-depth-1">
-													<a href="index.html#services">Construction</a>
-												</li>
-												<li class="menu-item menu-item-depth-1">
-													<a href="index.html#services">Renovations</a>
-												</li>
-												<li class="menu-item menu-item-depth-1">
-													<a href="index.html#services">Consulting</a>
-												</li>
-												<li class="menu-item menu-item-depth-1">
-													<a href="index.html#services">Architecture</a>
-												</li>
-											</ul>
 										</li>
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0">
-											<a href="index.html#about">About us</a>
+											<a href="about.html">About us</a>
 										</li>
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0">
