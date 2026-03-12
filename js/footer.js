@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
 										<a href="index.html#services">What we do</a>
 									</li>
 									<li class="menu-item">
-										<a href="index.html#about">About us</a>
+										<a href="about.html">About us</a>
 									</li>
 									<li class="menu-item">
 										<a href="contact.html">Contact us</a>
