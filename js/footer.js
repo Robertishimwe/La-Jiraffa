@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					<div class="row">
 						<div class="text-center">
 							<div id="text-5" class="widget-container widget_text">
-								<div class="textwidget">La Jiraffa | © 2025 La Jiraffa, All rights reserved</div>
+								<div class="textwidget">La Jiraffa | © ${new Date().getFullYear()} La Jiraffa, All rights reserved</div>
 							</div>
 						</div>
 					</div>
