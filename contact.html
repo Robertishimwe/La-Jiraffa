@@ -9,8 +9,17 @@
 	<link rel="shortcut icon" href="./images/LaGiraffaLogo-Nobg(Black).png" type="image/x-icon" />
 	<!-- FontAwesome Icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-	<title>La Jiraffa &#8211; Construction and Renovation Services in Rwanda</title>
+	<title>Contact La Jiraffa &#8211; Get a Quote for Construction in Rwanda</title>
+	<meta name="description" content="Reach out to La Jiraffa for your next construction or renovation project in Rwanda. Get in touch with our team for a consultation and quote." />
+	<meta property="og:title" content="Contact La Jiraffa &#8211; Get a Quote for Construction in Rwanda" />
+	<meta property="og:description" content="Reach out to La Jiraffa for your next construction or renovation project in Rwanda. Get in touch with our team for a consultation and quote." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://www.lajiraffa.com/contact.html" />
+	<meta property="og:image" content="https://www.lajiraffa.com/images/LaGiraffaLogo-Nobg(Black).png" />
+	<meta name="author" content="La Jiraffa Ltd" />
 	<meta name='robots' content='max-image-preview:large' />
+	<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+	<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
 	<link rel='dns-prefetch' href='//fonts.googleapis.com' />
 	<!-- Feed link removed -->
 	<!-- Comments feed removed -->
@@ -912,10 +921,34 @@
 	<!-- WP JSON link removed -->
 	<!-- WP RSD link removed -->
 	<!-- WP generator removed -->
-	<link rel="canonical" href="contact.html" />
+	<link rel="canonical" href="https://www.lajiraffa.com/contact.html" />
 	<!-- shortlink removed -->
-	<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="javascript:void(0)" />
-	<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="javascript:void(0)" />
+	<!-- oEmbed links removed -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "LocalBusiness",
+		"name": "La Jiraffa",
+		"description": "Premier construction, renovation, and architectural services in Rwanda.",
+		"url": "https://www.lajiraffa.com",
+		"telephone": "+250783490762",
+		"email": "info@lajiraffa.rw",
+		"address": {
+			"@type": "PostalAddress",
+			"streetAddress": "KK 44 Ave Kaleb building",
+			"addressLocality": "Kigali",
+			"addressCountry": "RW"
+		},
+		"image": "https://www.lajiraffa.com/images/LaGiraffaLogo-Nobg(Black).png",
+		"priceRange": "$$",
+		"sameAs": [
+			"https://www.instagram.com/la_jiraffa",
+			"https://www.linkedin.com/in/la-jiraffa-154a31377/",
+			"https://x.com/la_jiraffa",
+			"https://www.facebook.com/profile.php?id=100089223604650"
+		]
+	}
+	</script>
 	<style type="text/css">
 		.recentcomments a {
 			display: inline !important;
@@ -1037,7 +1070,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-5 contact-info" style="padding:20px;">
-							<h2>Contact Us</h2>
+							<h1>Contact Us</h1>
 							<p style="margin-bottom:20px; line-height:1.6; height:auto;">Have a project in mind or
 								questions
 								about our
@@ -1055,7 +1088,8 @@
 							</ul>
 						</div>
 						<div class="col-md-7" style="padding:20px;">
-							<form id="contactForm" class="contact-form" novalidate>
+							<form id="contactForm" class="contact-form" action="https://formspree.io/f/xwvrbgkq" method="POST">
+								<input type="text" name="_gotcha" style="display:none" />
 								<div style="display:flex;gap:12px;flex-wrap:wrap;">
 									<input type="text" name="name" id="cf-name" placeholder="Your name" required
 										style="flex:1 1 48%;padding:12px;border:1px solid #ddd;border-radius:4px;" />
@@ -1075,10 +1109,7 @@
 										Message sent. Thank you!</div>
 								</div>
 							</form>
-							<p style="margin-top:10px;color:#666;font-size:13px;">Note: This form performs client-side
-								validation and shows a success message. To actually
-								send emails, configure a server endpoint or a service like Formspree or your backend.
-							</p>
+						</div>
 						</div>
 					</div>
 				</div>
@@ -1387,26 +1418,66 @@
 	</script>
 	</script>
 	<script>
-		// Contact form client-side handler: validates and shows a success message.
+		// Contact form handler: submits to Formspree via AJAX
 		(function () {
 			document.addEventListener('DOMContentLoaded', function () {
 				var form = document.getElementById('contactForm');
 				if (!form) return;
 				var status = document.getElementById('cf-status');
+				var submitBtn = form.querySelector('button[type="submit"]');
 				form.addEventListener('submit', function (e) {
 					e.preventDefault();
-					// Simple HTML5 validation check
+					// HTML5 validation check
 					if (!form.checkValidity()) {
 						form.reportValidity();
 						return;
 					}
-					// Simulate sending: show success and reset form
-					if (status) {
-						status.style.display = 'inline-block';
-						status.textContent = 'Message sent. Thank you!';
+					// Show loading state
+					if (submitBtn) {
+						submitBtn.disabled = true;
+						submitBtn.textContent = 'Sending...';
 					}
-					form.reset();
-					// In a real site, replace this with an XHR/fetch POST to your backend or a service.
+					// Send data to Formspree
+					var formData = new FormData(form);
+					fetch(form.action, {
+						method: 'POST',
+						body: formData,
+						headers: { 'Accept': 'application/json' }
+					}).then(function (response) {
+						if (response.ok) {
+							if (status) {
+								status.style.display = 'inline-block';
+								status.style.color = '#2d7a2d';
+								status.textContent = 'Message sent. Thank you!';
+							}
+							form.reset();
+						} else {
+							response.json().then(function (data) {
+								if (status) {
+									status.style.display = 'inline-block';
+									status.style.color = '#cc0000';
+									status.textContent = data.errors ? data.errors.map(function (e) { return e.message; }).join(', ') : 'Something went wrong. Please try again.';
+								}
+							}).catch(function () {
+								if (status) {
+									status.style.display = 'inline-block';
+									status.style.color = '#cc0000';
+									status.textContent = 'Something went wrong. Please try again.';
+								}
+							});
+						}
+					}).catch(function () {
+						if (status) {
+							status.style.display = 'inline-block';
+							status.style.color = '#cc0000';
+							status.textContent = 'Network error. Please check your connection and try again.';
+						}
+					}).finally(function () {
+						if (submitBtn) {
+							submitBtn.disabled = false;
+							submitBtn.textContent = 'Send Message';
+						}
+					});
 				});
 			});
 		})();
